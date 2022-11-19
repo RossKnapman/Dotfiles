@@ -1,0 +1,193 @@
+
+
+##############
+# MATH STUFF #
+##############
+
+snippet eqnn "Equation without a number" b
+\begin{equation*}
+	${0:${VISUAL}}
+\end{equation*}
+endsnippet
+
+snippet aln "Align" b
+\begin{align}
+	${0:${VISUAL}}
+\end{align}
+endsnippet
+
+snippet alnn "Align without a number" b
+\begin{align*}
+	${0:${VISUAL}}
+\end{align*}
+endsnippet
+
+snippet gath "Gather" b
+\begin{gather}
+	${0:${VISUAL}}
+\end{gather}
+endsnippet
+
+snippet gathh "Gather" b
+\begin{gather*}
+	${0:${VISUAL}}
+\end{gather*}
+endsnippet
+
+snippet eqa "Equation array" b
+\begin{eqnarray}
+	${1:${VISUAL}} & ${2:${VISUAL}} & ${0:${VISUAL}}
+\end{eqnarray}
+endsnippet
+
+snippet eqann "Equation array without a number" b
+\begin{eqnarray*}
+	${1:${VISUAL}} & ${2:${VISUAL}} & ${0:${VISUAL}}
+\end{eqnarray*}
+endsnippet
+
+#########################################
+# MY (ROSS KNAPMAN'S) PERSONAL COMMANDS # 
+#########################################
+
+snippet eqn "Equation without a number" b
+\begin{equation}
+    ${0:${VISUAL}}
+\end{equation}
+endsnippet
+
+#snippet il "Math" w
+#$${1}$`!p
+#if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+#    snip.rv = ' '
+#else:
+#    snip.rv = ''
+#`$2
+#endsnippet
+
+snippet il "Math" w
+$${1}$$0
+endsnippet
+
+snippet partial "\partial_" i
+\partial_${1}$0
+endsnippet
+
+snippet ^ "Superscript" i
+^{$1}$0
+endsnippet
+
+snippet _ "Subscript" i
+_{$1}$0
+endsnippet
+
+snippet mbf "\mathbf{}" w
+\mathbf{${1:${VISUAL}}}$0
+endsnippet
+
+snippet mrm "\mathrm{}" w
+\mathrm{${1:${VISUAL}}}$0
+endsnippet
+
+snippet lrb "\left( ... \right) with bracket specified" w
+\left$1 ${2:${VISUAL}}\right`!p if t[1] == '(':
+	    snip.rv = ')'
+elif t[1] == '[':
+    snip.rv = ']'
+elif t[1] == '{':
+    snip.rv = '}'`$0
+endsnippet
+
+snippet frac "\frac{}{}" i
+\frac{$1}{$2}$0
+endsnippet
+
+snippet 3vec "3-component column vector" i
+\begin{bmatrix}
+	$1 \\\\
+	$2 \\\\
+	$3
+\end{bmatrix}$0
+endsnippet
+
+snippet 3mat "3x3 matrix" i
+\begin{bmatrix}
+	$1 & $2 & $3 \\\\
+	$4 & $5 & $6 \\\\
+	$7 & $8 $ $9
+\end{bmatrix}$0
+endsnippet
+
+snippet lap "Laplacian" i
+\nabla^2
+endsnippet
+
+snippet deriv "d/dx" w
+\frac{\mathrm{d} $1}{\mathrm{d} $2}$0
+endsnippet
+
+
+snippet deriv2 "d/dx" w
+\frac{\mathrm{d}^2 $1}{\mathrm{d} $2^2}$0
+endsnippet
+
+snippet ddx "d/dx" w
+\frac{\partial $1}{\partial $2}$0
+endsnippet
+
+snippet pderiv "partial y / partial x" w
+\frac{\partial $1}{\partial $2}$0
+endsnippet
+
+snippet p2deriv "partial y / partial x" w
+\frac{\partial^2 $1}{\partial $2^2}$0
+endsnippet
+
+snippet sth "sin theta" w
+\sin{\theta}
+endsnippet
+
+snippet sphi "sin phi" w
+\sin{\phi}
+endsnippet
+
+snippet cth "cos theta" w
+\cos{\theta}
+endsnippet
+
+snippet cphi "cos phi" w
+\cos{\phi}
+endsnippet
+
+snippet unitvec "Unit vector, ehat notation" w
+\hat{\mathbf{e}}_{$1}$0
+endsnippet
+
+snippet soln "Solution for problems sheets" w
+\begin{solution}
+	$1
+\end{solution}
+$0
+endsnippet
+
+snippet verb "Verbatim environment" w
+\begin{verbatim}
+	$1
+\end{verbatim}
+$0
+endsnippet
+
+snippet ilv "Inline verbatim" w
+\verb|$1|$0
+endsnippet
+
+snippet xint "Definite integral in x" w
+\int_{$1}^{$2} $3 \, \mathrm{d}x$0
+endsnippet
+
+snippet xintin "Indefinite integral in x" w
+\int $1 \, \mathrm{d}x$0
+endsnippet
+
+# vim:ft=snippets:
+

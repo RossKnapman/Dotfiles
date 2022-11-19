@@ -1,0 +1,6 @@
+# Synctex stuff
+set synctex true
+set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
+
+# Scroll bar
+set guioptions scv

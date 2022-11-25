@@ -4,7 +4,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

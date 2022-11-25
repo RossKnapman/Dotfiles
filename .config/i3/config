@@ -204,3 +204,6 @@ strip_workspace_numbers yes
 	}
 }
 
+
+# Don't move mouse to focus
+mouse_warping none
